@@ -19,6 +19,9 @@ public class Cliente {
 			return true;
 
 		final Cliente c = (Cliente) obj;
+		
+		if (this.nome==null&&c.nome!=null) return false;
+		if (this.nome!=null&&c.nome==null) return false;
 
 		return true;
 	}
